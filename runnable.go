@@ -1,3 +1,3 @@
 package run
 
-type Runnable func(Config) error
+type Runnable func(Container) error

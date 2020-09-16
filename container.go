@@ -5,7 +5,6 @@ type Container struct {
 	Logger
 }
 
-var DefaultContainer = Container{
-	Config: DefaultConfig,
-	Logger: DefaultLogger,
+func (c Container) Run(f func(Container) error) {
+	c.Logger.Error.Err(f(c))
 }

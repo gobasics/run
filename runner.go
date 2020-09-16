@@ -7,7 +7,7 @@ import (
 
 type Runner map[string]Runnable
 
-func (r Runner) Run(c Config) error {
+func (r Runner) Run(c Container) error {
 	if len(c.Args) == 0 {
 		return errors.New(ArgsErr)
 	}

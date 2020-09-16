@@ -9,3 +9,8 @@ var DefaultConfig = Config{
 	Stdin:  os.Stdin,
 	Stdout: os.Stdout,
 }
+
+var DefaultContainer = Container{
+	Config: DefaultConfig,
+	Logger: DefaultLogger,
+}

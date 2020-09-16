@@ -18,10 +18,10 @@ func TestRunnerRun(t *testing.T) {
 	} {
 		t.Run(strconv.Itoa(k), func(t *testing.T) {
 			m := Runner{
-				"foo": func(Config) error { return nil },
+				"foo": func(Container) error { return nil },
 			}
 
-			got := m.Run(Config{Args: v.args})
+			got := m.Run(Container{Config: Config{Args: v.args}})
 			if (got == nil) != (v.want == nil) {
 				t.Errorf("want %v, got %v", v.want, got)
 			}
