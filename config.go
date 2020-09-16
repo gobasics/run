@@ -4,7 +4,7 @@ import "io"
 
 type Config struct {
 	Args   []string
-	Env    string
+	Env    []string
 	Stderr io.Writer
 	Stdin  io.Reader
 	Stdout io.Writer
